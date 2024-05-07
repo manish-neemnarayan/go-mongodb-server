@@ -7,7 +7,7 @@ import (
 )
 
 type DBServicer interface {
-	Fetch(filters types.FilterOptions) *[]types.FetchResponse
+	Fetch(filters types.FilterOptions) []types.FetchResponse
 }
 
 type DBService struct {

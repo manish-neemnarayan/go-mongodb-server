@@ -16,7 +16,12 @@ type FetchResponse struct {
 }
 
 type UserResponse struct {
-	Code    uint             `json:"code"`
-	Msg     string           `json:"msg"`
-	Records *[]FetchResponse `json:"records"`
+	Code    uint            `json:"code"`
+	Msg     string          `json:"msg"`
+	Records []FetchResponse `json:"records"`
+}
+
+type MemoryData struct {
+	Key   string `json:"key"`
+	Value string `json:"value"`
 }

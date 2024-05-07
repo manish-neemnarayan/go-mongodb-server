@@ -1,3 +1,3 @@
 run:
 	go build -o bin/server .
-	./bin/server
+	./bin/server --uri="$(env)"

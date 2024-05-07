@@ -1,6 +1,6 @@
 module github.com/manish-neemnarayan/go-mongodb-server
 
-go 1.21.1
+go 1.21
 
 require (
 	github.com/golang/snappy v0.0.1 // indirect

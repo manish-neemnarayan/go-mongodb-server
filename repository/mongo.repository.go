@@ -24,7 +24,7 @@ func NewMongoDBRepo(client *mongo.Client, dbname string, collName string) servic
 	}
 }
 
-func (m *mongoDBRepo) Fetch(filters types.FilterOptions) *[]types.FetchResponse {
+func (m *mongoDBRepo) Fetch(filters types.FilterOptions) []types.FetchResponse {
 	ctx := context.Background()
 
 	pipeline := []bson.M{
@@ -67,5 +67,5 @@ func (m *mongoDBRepo) Fetch(filters types.FilterOptions) *[]types.FetchResponse 
 		log.Fatalf("Error while getting data: %v", err)
 	}
 
-	return &results
+	return results
 }
